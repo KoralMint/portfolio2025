@@ -8,6 +8,7 @@ interface Project {
   id: string
   title: string
   type: string
+  featured?: boolean
   description: string
   thumbnail: string
   githubUrl?: string
@@ -24,16 +25,17 @@ const projects: Project[] = [
   {
     id: "remotephone",
     title: "RemotePhone",
-    type: "個人開発",
+    type: "個人開発 / WIP",
+    featured: true,
     description: "Windowsをスマートフォンから遠隔操作",
     thumbnail: "/placeholder.svg?height=300&width=300",
-    githubUrl: "https://github.com/username/remotephone",
-    websiteUrl: "https://tree-ivy.example.com",
-    period: "2024年4月 - 2024年6月",
+    githubUrl: "https://github.com/KoralMint/RemotePhone",
+    websiteUrl: "http://skyboxx.tplinkdns.com:8000/",
+    period: "2025年4月 - 現在",
     detailDescription:
-      "スマートフォンからWindowsパソコンを遠隔操作できるアプリケーションです。WebSocketを使用したリアルタイム通信により、マウス操作やキーボード入力を遠隔で行うことができます。外出先からでも自宅のパソコンを操作できる便利なツールとして開発しました。",
+      "スマートフォンからWindowsパソコンを遠隔操作できるアプリケーションです。\nP2P通信を使用したリアルタイム通信により、トラックパッド操作やキーボード、音量操作を遠隔で行うことができます。\n\nUX,セキュリティ、パフォーマンスに配慮し、ホスト、クライアント、中継サービスをフロント・バック共に設計・実装しました。\n現在、さらなるUX向上を目指して開発中です。",
     languages: ["Python", "JavaScript"],
-    technologies: ["WebSocket", "Flask", "React Native"],
+    technologies: ["WebSocket", "FastAPI", "Docker", "GUI"],
   },
   {
     id: "minecraft-server-agent",
@@ -41,67 +43,82 @@ const projects: Project[] = [
     type: "個人開発",
     description: "ゲームサーバーをDiscordから電源操作",
     thumbnail: "/placeholder.svg?height=300&width=300",
-    githubUrl: "https://github.com/username/minecraft-server-agent",
-    period: "2024年1月 - 2024年3月",
+    githubUrl: "https://github.com/KoralMint/mc-server-agent",
+    period: "2024年11月 - 2024年12月",
     detailDescription:
-      "DiscordボットからMinecraftサーバーの起動・停止・再起動を行えるシステムです。サーバーの状態監視機能も搭載しており、プレイヤーの参加状況やサーバーの負荷状況をリアルタイムで確認できます。",
+      "DiscordボットからMinecraftサーバーの起動・停止・オンラインプレイヤー確認を行えるシステムです。\n\ndocker.pyとdiscord.pyを駆使し、複数サーバー対応、起動中等の状態表示、プレイヤー名などをリアルタイムで確認できます。\n操作者のDiscordロールでアクションを制限など、管理のしやすさにも考慮しています。",
     languages: ["Python"],
-    technologies: ["Discord.py", "Docker", "Linux"],
+    technologies: ["Discord", "Docker", "API"],
   },
   {
     id: "delikitchup",
     title: "delikitchup",
     type: "チーム開発",
-    description: "MBSDCCコンテストで初めてGitとチーム開発に挑んだ",
+    description: "MBSDCCコンテストで初めてPython, Gitとチーム開発に挑んだ",
     thumbnail: "/placeholder.svg?height=300&width=300",
-    githubUrl: "https://github.com/username/minecraft-server-agent",
+    githubUrl: "https://github.com/KoralMint/delikitchup",
     period: "2023年10月 - 2023年12月",
     detailDescription:
-      "MBSDCCコンテストに参加した際のチーム開発プロジェクトです。初めてのGitを使った本格的なチーム開発で、バージョン管理やコードレビューの重要性を学びました。料理レシピ共有アプリケーションを開発し、ユーザー投稿機能や検索機能を実装しました。",
-    languages: ["JavaScript", "HTML", "CSS"],
-    technologies: ["Node.js", "Express", "MongoDB"],
+      "MBSD Cybersecurity Challenges コンテストに参加した際のチーム開発プロジェクトです。\nメインプログラマとして、ツールのアルゴリズムやバージョン管理を学びました。コンテストでは最終審査会まで進出し、他の出場者や現場のセキュリティエンジニアとの交流も行いました。",
+    languages: ["Python"],
+    technologies: ["クローラー", "Streamlit",  "Selenium", "requests"],
   },
+  /*
   {
     id: "tree-ivy",
     title: "Tree-Ivy",
     type: "開発協力",
     description: "学校の時間割・授業管理システムを見やすく・使いやすくする拡張機能",
     thumbnail: "/placeholder.svg?height=300&width=300",
-    websiteUrl: "https://tree-ivy.example.com",
-    period: "2024年9月 - 現在",
+    period: "2024年7月 - 2024年7月 (協力期間)",
     detailDescription:
-      "学校の既存時間割システムのUIを改善するブラウザ拡張機能です。見づらいインターフェースを直感的で使いやすいデザインに変更し、学生の学習効率向上に貢献しています。カレンダー表示や課題管理機能も追加しました。",
+      "学校の既存時間割システムのUIを改善するブラウザ拡張機能です。\n\n時間割を直感的で見やすいデザインに変更したほか、カスタマイズメニューを実装する等で開発に貢献しています。",
     languages: ["JavaScript", "CSS"],
     technologies: ["Chrome Extension API", "DOM操作"],
   },
+  */
   {
-    id: "iwapos",
-    title: "IwaPos",
+    id: "iwasakiposystem",
+    title: "IwasakiPosSystem",
     type: "開発協力",
     description: "学園祭に電子決済導入したくねw 的なノリで始まったレジ決済・管理システム",
     thumbnail: "/placeholder.svg?height=300&width=300",
-    period: "2024年7月 - 2024年9月",
+    githubUrl: "https://github.com/kurappy-14/iwasakiPosSystem",
+    period: "2024年11月, 2025年5月 (協力期間)",
     detailDescription:
-      "学園祭での電子決済を実現するPOSシステムです。QRコード決済機能や売上管理機能を搭載し、現金のやり取りを減らして効率的な販売を可能にしました。リアルタイムでの売上集計や在庫管理も行えます。",
-    languages: ["Python", "JavaScript"],
+      "学園祭での電子決済・売上管理および順番待ちシステムを低コストで実現するシステムです。\n\n設計協力・アルゴリズムの最適化に貢献したほか、学内コンテストに出品した際のスライド・ポスターデザインおよび動画資料の作成に協力しました。",
+    languages: ["JavaScript"],
     technologies: ["FastAPI", "SQLite", "QR Code"],
   },
   {
+    id: "scratch-projects",
+    title: "Scratch Projects",
+    type: "個人",
+    description: "高校時代に熱中したゲーム制作・アルゴリズム学習",
+    thumbnail: "/placeholder.svg?height=300&width=300",
+    websiteUrl: "https://scratch.mit.edu/users/Ros_tim/",
+    period: "2021年 - 2023年",
+    detailDescription:
+      "コンピューター部に所属し、Scratchを通じて仲間とプログラミングの基礎を教えあいました。\nゲーム制作のほか、迷路探索アルゴリズムやパーリンノイズ再現などアルゴリズムの学習を行っていました。\n\n現在はPythonやJavaScriptなどの言語に移行していますが、現在もアイデアの視覚化・共有に活用しています。",
+    languages: ["Scratch"],
+    technologies: ["ゲーム制作", "アルゴリズム学習"],
+  },
+  {
     id: "design-logo",
-    title: "デザインロゴ制作",
+    title: "デザイン・ロゴ制作",
     type: "個人",
     description: "中学生の頃からIllustratorいじり",
     thumbnail: "/placeholder.svg?height=300&width=300",
-    period: "2020年 - 現在",
+    period: "2018年 - 現在",
     detailDescription:
-      "中学生の頃からAdobe Illustratorを使用してロゴデザインやグラフィックデザインを手がけています。学校のイベントポスターや地域のお店のロゴ制作など、様々なデザイン案件に携わってきました。",
+      "中学生の頃からAdobe Illustratorを使用してロゴデザインやグラフィックデザインを手がけています。\nプロジェクトや身内のデザイン・ロゴ制作や、地域のお店・ブランドのロゴ制作などに携わってきました。",
     languages: [],
-    technologies: ["Adobe Illustrator", "デザイン理論", "ブランディング"],
+    technologies: ["Adobe Illustrator", "デザイン"],
   },
 ]
 
 // プロフィールアイコンのURL（指定がない場合は表示しない）
-const profileIconUrl = "https://avatars.githubusercontent.com/u/140129280?v=4" // ここにアイコンのURLを指定
+const profileIconUrl = "https://avatars.githubusercontent.com/u/140129280?v=4"
 
 // スキルデータの定義を追加
 const skillsData = {
@@ -110,16 +127,17 @@ const skillsData = {
     { name: "JavaScript", featured: true, icon: "icon/javascript.png" },
     { name: "Scratch", featured: false, icon: "icon/scratch.svg" },
     { name: "Java", featured: false, icon: "icon/java.png" },
+    { name: "C#(Unity)", featured: false, icon: "icon/csharp.png" },
     { name: "Lua", featured: false, icon: "icon/lua.png" },
-    { name: "HTML/CSS", featured: false, icon: "icon/html.png" },
   ],
   creative: [
-    { name: "Illustrator", featured: true, icon: "icon/ai.webp" },
+    { name: "Illustrator", featured: true, icon: "icon/illustrator.webp" },
+    { name: "Photoshop", featured: false, icon: "icon/photoshop.png" },
     { name: "Blender", featured: false, icon: "icon/blender.png" },
     { name: "Unity", featured: false, icon: "icon/unity.png" },
   ],
-  tools: [
-    { name: "Git", featured: false, icon: "icon/git.png" },
+  devtools: [
+    { name: "Git / Github", featured: false, icon: "icon/git.png" },
     { name: "Docker", featured: false, icon: "icon/docker.png" },
     { name: "Linux", featured: false, icon: "icon/linux.webp" },
   ],
@@ -221,7 +239,7 @@ export default function Portfolio() {
         <div className="container mx-auto text-center">
           {profileIconUrl && (
             <a
-              href="https://example.com/profile" // プロフィールページのURLを設定
+              href="https://github.com/KoralMint" // プロフィールページのURLを設定
               target="_blank"
               rel="noopener noreferrer"
               className="block w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
@@ -245,10 +263,10 @@ export default function Portfolio() {
       <section id="about" className="py-20 px-4 shadow-lg">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-accent">About Me</h2>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="bg-secondary rounded-lg p-8 shadow-xl transition-shadow duration-300">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid-cols-1 md:grid-cols-2 gap-6">
                   <h3 className="text-xl font-bold mb-4 text-accent">基本情報</h3>
                   <div className="space-y-2">
                     <p>
@@ -257,15 +275,24 @@ export default function Portfolio() {
                     <p>
                       <span className="font-semibold">所属:</span> 情報科学専門学校
                     </p>
+                    <p>
+                      <span className="font-semibold">資格:</span> FE, 英検2級
+                    </p>
                   </div>
                 </div>
-                <div>
+                <div className="col-span-2">
                   <h3 className="text-xl font-bold mb-4 text-accent">自己紹介</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    プログラミングとデザインの両方に興味を持ち、日々新しい技術を学んでいます。
-                    特に「便利」なツールやシステムを作ることが好きで、身の回りの課題を
-                    技術で解決することに喜びを感じています。チーム開発から個人開発まで
-                    幅広く経験し、常にユーザー目線での開発を心がけています。
+                    ご覧いただきありがとうございます。<br />
+                    作業を効率化したり、身の回りの不便を解消できるような、便利なものを作るのが好きな情報学生です。ソフトウェア、3D印刷物、IoTにサーバーなど、分野問わずに手を出しています。<br />
+                    <br />
+                    中学からプログラミングを始め、現在は主にPythonやweb技術を中心に個人開発やチーム開発に取り組んでいます。<br />
+                    常に新しい技術を学び、開発の幅を広げることに情熱を持っています。<br />
+                    <br />
+                    趣味は主にサンドボックスゲーム、グラフィックデザインです。
+                    技術、趣味ともにクリエイティブな活動を通じて、アイデアを形にすることが好きです。<br />
+                    便利で使いやすいものを目指して、日々学び続けています。<br />
+
                   </p>
                 </div>
               </div>
@@ -282,7 +309,7 @@ export default function Portfolio() {
           {/* Languages */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-8 text-accent">Languages</h3>
-            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {skillsData.languages.map((skill) => (
                 <div
                   key={skill.name}
@@ -294,7 +321,8 @@ export default function Portfolio() {
                     <img
                       src={skill.icon || "/placeholder.svg"}
                       alt={skill.name}
-                      className="w-12 h-12 mb-3 object-cover rounded"
+                      className="w-12 h-12 mb-3 object-contain rounded select-none"
+                      draggable={false}
                     />
                   ) : (
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center font-bold text-primary mb-3 text-lg">
@@ -312,7 +340,7 @@ export default function Portfolio() {
           {/* Creative */}
           <div className="mb-12">
             <h3 className="text-2xl font-bold mb-8 text-accent">Creative</h3>
-            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {skillsData.creative.map((skill) => (
                 <div
                   key={skill.name}
@@ -324,7 +352,8 @@ export default function Portfolio() {
                     <img
                       src={skill.icon || "/placeholder.svg"}
                       alt={skill.name}
-                      className="w-12 h-12 mb-3 object-cover rounded"
+                      className="w-12 h-12 mb-3 object-contain rounded select-none"
+                      draggable={false}
                     />
                   ) : (
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center font-bold text-primary mb-3 text-lg">
@@ -341,9 +370,9 @@ export default function Portfolio() {
 
           {/* Tools */}
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-accent">Tools</h3>
-            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-4">
-              {skillsData.tools.map((skill) => (
+            <h3 className="text-2xl font-bold mb-8 text-accent">DevTools</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {skillsData.devtools.map((skill) => (
                 <div
                   key={skill.name}
                   className={`bg-tertiary rounded-lg p-4 flex flex-col items-center justify-center shadow-lg transition-all duration-200 hover:shadow-xl hover:scale-105 ${
@@ -354,7 +383,8 @@ export default function Portfolio() {
                     <img
                       src={skill.icon || "/placeholder.svg"}
                       alt={skill.name}
-                      className="w-12 h-12 mb-3 object-cover rounded"
+                      className="w-12 h-12 mb-3 object-contain rounded select-none"
+                      draggable={false}
                     />
                   ) : (
                     <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center font-bold text-primary mb-3 text-lg">
@@ -380,7 +410,8 @@ export default function Portfolio() {
               <div
                 key={project.id}
                 onClick={() => openProjectDetail(project)}
-                className="bg-secondary rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 hover:-translate-y-2 group"
+                className={`bg-secondary rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 hover:-translate-y-2 group ${
+                    project.featured ? "border-2 border-accent bg-accent/10" : "border border-transparent"}`}
               >
                 <div className="w-full h-48 bg-accent/20 rounded-lg mb-4 overflow-hidden relative">
                   <img
@@ -405,6 +436,9 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <p className="text-xl">And more...</p>
+          </div>
         </div>
       </section>
 
@@ -421,7 +455,7 @@ export default function Portfolio() {
                   </svg>
                 ),
                 label: "GitHub",
-                href: "https://github.com/username"
+                href: "https://github.com/KoralMint"
                 },
                 {
                 icon: () => (
@@ -431,7 +465,7 @@ export default function Portfolio() {
                   </svg>
                 ),
                 label: "Discord",
-                href: "https://discord.com/users/username"
+                href: "https://discord.com/users/445347028508213249"
                 },
                 {
                 icon: () => (
@@ -440,7 +474,7 @@ export default function Portfolio() {
                   </svg>
                 ),
                 label: "X",
-                href: "https://x.com/username",
+                href: "https://x.com/Koral_mint",
               },
             ].map((link) => (
               <a
@@ -464,10 +498,10 @@ export default function Portfolio() {
           <div className="max-w-md mx-auto">
             <div className="bg-secondary rounded-xl p-3 flex items-center gap-3 shadow-lg">
               <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-              <span className="text-gray-300 text-sm sm:text-base truncate flex-1">user@example.com</span>
+              <span className="text-gray-300 text-sm sm:text-base truncate flex-1">aitaiyosora300@gmail.com</span>
               <button
                 onClick={(event) => {
-                  navigator.clipboard.writeText("user@example.com")
+                  navigator.clipboard.writeText("aitaiyosora300@gmail.com")
                   // 簡単なフィードバック表示
                   const button = (event.target as Element).closest("button")
                   if (button) {
@@ -571,7 +605,9 @@ export default function Portfolio() {
 
                 <div>
                   <h4 className="text-lg font-bold mb-3 text-accent">説明</h4>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{selectedProject.detailDescription}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed" style={{ whiteSpace: "pre-line" }}>
+                    {selectedProject.detailDescription}
+                  </p>
 
                   {selectedProject.languages.length > 0 && (
                     <div className="mb-4">
