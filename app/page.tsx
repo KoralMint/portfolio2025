@@ -46,7 +46,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/KoralMint/mc-server-agent",
     period: "2024年11月 - 2024年12月",
     detailDescription:
-      "DiscordボットからMinecraftサーバーの起動・停止・オンラインプレイヤー確認を行えるシステムです。\n\ndocker.pyとdiscord.pyを駆使し、複数サーバー対応、起動中等の状態表示、プレイヤー名などをリアルタイムで確認できます。\n操作者のDiscordロールでアクションを制限など、管理のしやすさにも考慮しています。",
+      "Discordボットから、Docker上のMinecraftサーバーの起動・停止・オンラインプレイヤー確認を行えるシステムです。\n\ndocker.pyとdiscord.pyを駆使し、複数サーバー対応、起動中等の状態表示、プレイヤー名などをリアルタイムで確認できます。\n操作者のDiscordロールでアクションを制限など、管理のしやすさにも考慮しています。",
     languages: ["Python"],
     technologies: ["Discord", "Docker", "API"],
   },
@@ -93,7 +93,7 @@ const projects: Project[] = [
   {
     id: "scratch-projects",
     title: "Scratch Projects",
-    type: "個人",
+    type: "個人活動",
     description: "高校時代に熱中したゲーム制作・アルゴリズム学習",
     thumbnail: "/placeholder.svg?height=300&width=300",
     websiteUrl: "https://scratch.mit.edu/users/Ros_tim/",
@@ -106,12 +106,12 @@ const projects: Project[] = [
   {
     id: "design-logo",
     title: "デザイン・ロゴ制作",
-    type: "個人",
+    type: "個人活動",
     description: "中学生の頃からIllustratorいじり",
     thumbnail: "/placeholder.svg?height=300&width=300",
     period: "2018年 - 現在",
     detailDescription:
-      "中学生の頃からAdobe Illustratorを使用してロゴデザインやグラフィックデザインを手がけています。\nプロジェクトや身内のデザイン・ロゴ制作や、地域のお店・ブランドのロゴ制作などに携わってきました。",
+      "中学生の頃からAdobe Illustratorを使用してロゴデザインやグラフィックデザインを手がけています。\nプロジェクトや身内のデザイン・ロゴ制作、地域のお店・ブランドのロゴ制作などに携わってきました。",
     languages: [],
     technologies: ["Adobe Illustrator", "デザイン"],
   },
