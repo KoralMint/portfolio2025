@@ -28,7 +28,7 @@ const projects: Project[] = [
     type: "個人開発 / WIP",
     featured: true,
     description: "Windowsをスマートフォンから遠隔操作",
-    thumbnail: "/placeholder.jpg?height=300&width=300",
+    thumbnail: "./placeholder.jpg?height=300&width=300",
     githubUrl: "https://github.com/KoralMint/RemotePhone",
     websiteUrl: "http://skyboxx.tplinkdns.com:8000/",
     period: "2025年4月 - 現在",
@@ -42,7 +42,7 @@ const projects: Project[] = [
     title: "Minecraft Server Agent",
     type: "個人開発",
     description: "ゲームサーバーをDiscordから電源操作",
-    thumbnail: "/placeholder.jpg?height=300&width=300",
+    thumbnail: "./placeholder.jpg?height=300&width=300",
     githubUrl: "https://github.com/KoralMint/mc-server-agent",
     period: "2024年11月 - 2024年12月",
     detailDescription:
@@ -55,7 +55,7 @@ const projects: Project[] = [
     title: "delikitchup",
     type: "チーム開発",
     description: "MBSDCCコンテストで初めてPython, Gitとチーム開発に挑んだ",
-    thumbnail: "/placeholder.jpg?height=300&width=300",
+    thumbnail: "./placeholder.jpg?height=300&width=300",
     githubUrl: "https://github.com/KoralMint/delikitchup",
     period: "2023年10月 - 2023年12月",
     detailDescription:
@@ -69,7 +69,7 @@ const projects: Project[] = [
     title: "Tree-Ivy",
     type: "開発協力",
     description: "学校の時間割・授業管理システムを見やすく・使いやすくする拡張機能",
-    thumbnail: "/placeholder.jpg?height=300&width=300",
+    thumbnail: "./placeholder.jpg?height=300&width=300",
     period: "2024年7月 - 2024年7月 (協力期間)",
     detailDescription:
       "学校の既存時間割システムのUIを改善するブラウザ拡張機能です。\n\n時間割を直感的で見やすいデザインに変更したほか、カスタマイズメニューを実装する等で開発に貢献しています。",
@@ -82,7 +82,7 @@ const projects: Project[] = [
     title: "IwasakiPosSystem",
     type: "開発協力",
     description: "学園祭に電子決済導入したくねw 的なノリで始まったレジ決済・管理システム",
-    thumbnail: "/placeholder.jpg?height=300&width=300",
+    thumbnail: "./placeholder.jpg?height=300&width=300",
     githubUrl: "https://github.com/kurappy-14/iwasakiPosSystem",
     period: "2024年11月, 2025年5月 (協力期間)",
     detailDescription:
@@ -95,7 +95,7 @@ const projects: Project[] = [
     title: "Scratch Projects",
     type: "個人活動",
     description: "高校時代に熱中したゲーム制作・アルゴリズム学習",
-    thumbnail: "/placeholder.jpg?height=300&width=300",
+    thumbnail: "./placeholder.jpg?height=300&width=300",
     websiteUrl: "https://scratch.mit.edu/users/Ros_tim/",
     period: "2021年 - 2023年",
     detailDescription:
@@ -108,7 +108,7 @@ const projects: Project[] = [
     title: "デザイン・ロゴ制作",
     type: "個人活動",
     description: "中学生の頃からIllustratorいじり",
-    thumbnail: "/placeholder.jpg?height=300&width=300",
+    thumbnail: "./placeholder.jpg?height=300&width=300",
     period: "2018年 - 現在",
     detailDescription:
       "中学生の頃からAdobe Illustratorを使用してロゴデザインやグラフィックデザインを手がけています。\nプロジェクトや身内のデザイン・ロゴ制作、地域のお店・ブランドのロゴ制作などに携わってきました。",
@@ -245,7 +245,7 @@ export default function Portfolio() {
               className="block w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
             >
               <img
-                src={profileIconUrl || "/placeholder.jpg"}
+                src={profileIconUrl || "./placeholder.jpg"}
                 alt="プロフィールアイコン"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -319,7 +319,7 @@ export default function Portfolio() {
                 >
                   {skill.icon ? (
                     <img
-                      src={skill.icon || "/placeholder.jpg"}
+                      src={skill.icon || "./placeholder.jpg"}
                       alt={skill.name}
                       className="w-12 h-12 mb-3 object-contain rounded select-none"
                       draggable={false}
@@ -350,7 +350,7 @@ export default function Portfolio() {
                 >
                   {skill.icon ? (
                     <img
-                      src={skill.icon || "/placeholder.jpg"}
+                      src={skill.icon || "./placeholder.jpg"}
                       alt={skill.name}
                       className="w-12 h-12 mb-3 object-contain rounded select-none"
                       draggable={false}
@@ -381,7 +381,7 @@ export default function Portfolio() {
                 >
                   {skill.icon ? (
                     <img
-                      src={skill.icon || "/placeholder.jpg"}
+                      src={skill.icon || "./placeholder.jpg"}
                       alt={skill.name}
                       className="w-12 h-12 mb-3 object-contain rounded select-none"
                       draggable={false}
@@ -415,7 +415,7 @@ export default function Portfolio() {
               >
                 <div className="w-full h-48 bg-accent/20 rounded-lg mb-4 overflow-hidden relative">
                   <img
-                    src={project.thumbnail || "/placeholder.jpg"}
+                    src={project.thumbnail || "./placeholder.jpg"}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
@@ -553,7 +553,7 @@ export default function Portfolio() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <img
-                    src={selectedProject.thumbnail || "/placeholder.jpg"}
+                    src={selectedProject.thumbnail || "./placeholder.jpg"}
                     alt={selectedProject.title}
                     className="w-full aspect-square object-cover rounded-lg mb-4"
                   />
