@@ -29,7 +29,7 @@ const projects: Project[] = [
     featured: true,
     description: "Windowsをスマートフォンから遠隔操作",
     thumbnail: "./placeholder.jpg?height=300&width=300",
-    githubUrl: "https://github.com/KoralMint/RemotePhone",
+    githubUrl: "https://github.com/Koranoa3/RemotePhone",
     websiteUrl: "http://skyboxx.tplinkdns.com:8000/",
     period: "2025年4月 - 現在",
     detailDescription:
@@ -43,7 +43,7 @@ const projects: Project[] = [
     type: "個人開発",
     description: "ゲームサーバーをDiscordから電源操作",
     thumbnail: "./placeholder.jpg?height=300&width=300",
-    githubUrl: "https://github.com/KoralMint/mc-server-agent",
+    githubUrl: "https://github.com/Koranoa3/mc-server-agent",
     period: "2024年11月 - 2024年12月",
     detailDescription:
       "Discordボットから、Docker上のMinecraftサーバーの起動・停止・オンラインプレイヤー確認を行えるシステムです。\n\ndocker.pyとdiscord.pyを駆使し、複数サーバー対応、起動中等の状態表示、プレイヤー名などをリアルタイムで確認できます。\n操作者のDiscordロールでアクションを制限など、管理のしやすさにも考慮しています。",
@@ -56,7 +56,7 @@ const projects: Project[] = [
     type: "チーム開発",
     description: "MBSDCCコンテストで初めてPython, Gitとチーム開発に挑んだ",
     thumbnail: "./placeholder.jpg?height=300&width=300",
-    githubUrl: "https://github.com/KoralMint/delikitchup",
+    githubUrl: "https://github.com/Koranoa3/delikitchup",
     period: "2023年10月 - 2023年12月",
     detailDescription:
       "MBSD Cybersecurity Challenges コンテストに参加した際のチーム開発プロジェクトです。\nメインプログラマとして、ツールのアルゴリズムやバージョン管理を学びました。コンテストでは最終審査会まで進出し、他の出場者や現場のセキュリティエンジニアとの交流も行いました。",
@@ -239,7 +239,7 @@ export default function Portfolio() {
         <div className="container mx-auto text-center">
           {profileIconUrl && (
             <a
-              href="https://github.com/KoralMint" // プロフィールページのURLを設定
+              href="https://github.com/Koranoa3" // プロフィールページのURLを設定
               target="_blank"
               rel="noopener noreferrer"
               className="block w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
@@ -455,7 +455,7 @@ export default function Portfolio() {
                   </svg>
                 ),
                 label: "GitHub",
-                href: "https://github.com/KoralMint"
+                href: "https://github.com/Koranoa3"
                 },
                 {
                 icon: () => (
